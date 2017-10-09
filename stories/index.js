@@ -192,3 +192,22 @@ storiesOf('Specializations', module)
     data-armory-56-traits="2177,2061,2090"
   />
 );
+
+const makeLang = (lang) => (
+  <ArmoryEmbed
+    key={lang}
+    options={{
+      lang,
+    }}
+    name="specializations"
+    data-armory-ids="53"
+  />
+);
+
+storiesOf('configuration', module)
+.add('english', () => makeLang('en'))
+.add('french', () => makeLang('fr'))
+.add('chinese', () => makeLang('zh'))
+.add('russian', () => makeLang('ru'))
+.add('spanish', () => makeLang('es'))
+.add('german', () => makeLang('de'));

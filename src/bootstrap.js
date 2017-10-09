@@ -10,7 +10,6 @@ import { Tooltip } from 'armory-component-ui';
 import '!!style-loader!css-loader!armory-component-ui/styles.css'; // eslint-disable-line
 
 import { addStyleSheet } from './lib/dom';
-import { set as setLang } from './lib/i18n';
 import styles from './styles.less';
 import Store from './Store';
 
@@ -49,7 +48,7 @@ function setOptions () {
   return options;
 }
 
-function bootstrapEmbeds () {
+function bootstrapEmbeds ({ lang }) {
   if (!document.body) {
     throw new Error('Document body not loaded!');
   }
@@ -82,7 +81,7 @@ function bootstrapEmbeds () {
       };
 
       ReactDOM.render(
-        <Store>
+        <Store lang={lang}>
           <Component {...props} />
         </Store>,
         element
@@ -93,7 +92,7 @@ function bootstrapEmbeds () {
 
 let loaded = false;
 
-function bootstrapTooltip () {
+function bootstrapTooltip ({ lang }) {
   if (loaded) {
     return;
   }
@@ -106,7 +105,7 @@ function bootstrapTooltip () {
   document.body.appendChild(tooltipContainer);
 
   ReactDOM.render(
-    <Store>
+    <Store lang={lang}>
       <Tooltip showBadge className={cx(styles.tooltip, makeClassName('tooltip'))} />
     </Store>,
     tooltipContainer
@@ -118,11 +117,9 @@ function bootstrapTooltip () {
 export default function bootstrap () {
   const options = setOptions();
 
-  setLang(options.lang);
-
   return Promise.all([
     fetchStyles(),
-    bootstrapEmbeds(),
-    bootstrapTooltip(),
+    bootstrapEmbeds(options),
+    bootstrapTooltip(options),
   ]);
 }

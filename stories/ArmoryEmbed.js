@@ -2,15 +2,34 @@
 
 import React from 'react';
 import Highlight from 'react-highlight';
-import '!!style-loader!css-loader!highlight.js/styles/monokai-sublime.css';
+// $FlowFixMe
+import '!!style-loader!css-loader!highlight.js/styles/monokai-sublime.css'; // eslint-disable-line
 import bootstrap from '../src/bootstrap';
+
+const generateOptionsMarkup = (options) => {
+  const values = Object.keys(options).map((option) => `  ${option}: ${JSON.stringify(options[option])}`).join('\n,');
+
+  return `<script>
+document.GW2A_EMBED_OPTIONS = {
+${values}
+};
+</script>
+
+`;
+};
 
 export default class ArmoryEmbed extends React.Component<*> {
   props: {
     name: string,
+    options: {
+      [string]: any,
+    },
   };
 
   componentDidMount () {
+    // $FlowFixMe
+    document.GW2A_EMBED_OPTIONS = this.props.options;
+
     bootstrap();
   }
 
@@ -20,7 +39,8 @@ export default class ArmoryEmbed extends React.Component<*> {
   }
 
   render () {
-    const { name, ...props } = this.props;
+    const { name, options, ...props } = this.props;
+
     return (
       <span>
         <div
@@ -29,11 +49,12 @@ export default class ArmoryEmbed extends React.Component<*> {
         />
 
         <Highlight className="html">
-          {`<div
+          {`${options ? generateOptionsMarkup(options) : ''}<div
   data-armory-embed="${name}"
 ${Object.keys(props).map((prop) => `  ${prop}="${props[prop]}"`).join('\n')}
 >
 </div>
+
 <script async src="https://gw2armory.com/gw2aEmbeds.js"></script>
 `}
         </Highlight>
