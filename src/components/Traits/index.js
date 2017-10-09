@@ -1,61 +1,34 @@
 // @flow
 
-import type { Traits } from 'armory-component-ui';
 import type { EmbedProps } from '../../bootstrap';
-
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
-import { Trait, actions } from 'armory-component-ui';
-
-function mapStateToProps (state) {
-  return {
-    traits: state.traits,
-  };
-}
+import React from 'react';
+import { Gw2Trait } from 'armory-component-ui';
 
 type Props = EmbedProps & {
-  traits?: Traits,
-  fetchTraits?: (ids: Array<number>) => void,
   ids: Array<number>,
 };
 
-export default connect(mapStateToProps, {
-  fetchTraits: actions.fetchTraits,
-})(
-class TraitsEmbed extends Component<Props> {
-  props: Props;
-
-  static renderTrait (id, traits, blankText, size, props) {
-    if (id >= 0) {
-      return (
-        <Trait
-          active
-          key={id}
-          data={traits && traits[id]}
-          size={size}
-          {...props}
-        />
-      );
-    }
-
-    return <Trait active tooltipTextOverride={blankText} size={size} key={blankText} />;
-  }
-
-  componentWillMount () {
-    const { ids, fetchTraits } = this.props;
-
-    fetchTraits && fetchTraits(ids);
-  }
-
-  render () {
-    const { ids, traits, className, blankText, size, ...props } = this.props;
-
-    return (
-      <div className={className}>
-        {ids.map((id) => TraitsEmbed.renderTrait(id, traits, blankText, size, props))}
-      </div>
-    );
-  }
-}
+const TraitsEmbed = ({ ids, traits, className, blankText, size, ...props }: Props) => (
+  <div className={className}>
+    {ids.map((id, index) => (id >= 0 ? (
+      <Gw2Trait
+        active
+        // eslint-disable-next-line react/no-array-index-key
+        key={index}
+        id={id}
+        size={size}
+        {...props}
+      />
+    ) : (
+      <Gw2Trait
+        // eslint-disable-next-line react/no-array-index-key
+        key={index}
+        active
+        tooltipTextOverride={blankText}
+        size={size}
+      />
+    )))}
+  </div>
 );
+
+export default TraitsEmbed;

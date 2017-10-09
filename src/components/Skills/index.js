@@ -1,62 +1,36 @@
 // @flow
 
-import type { Skills } from 'armory-component-ui';
 import type { EmbedProps } from '../../bootstrap';
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Skill, actions } from 'armory-component-ui';
+import React from 'react';
+import { Gw2Skill } from 'armory-component-ui';
 
 import styles from './styles.less';
 
-function mapStateToProps (state) {
-  return {
-    skills: state.skills,
-  };
-}
-
 type Props = EmbedProps & {
-  skills?: Skills,
-  fetchSkills?: (ids: Array<number>) => void,
   ids: Array<number>,
 };
 
-export default connect(mapStateToProps, {
-  fetchSkills: actions.fetchSkills,
-})(
-class SkillsEmbed extends Component<Props> {
-  props: Props;
-
-  static renderSkill (id, skills, blankText, size, props) {
-    if (id >= 0) {
-      return (
-        <Skill
-          key={id}
-          className={styles.skill}
-          data={skills && skills[id]}
-          size={size}
-          {...props}
-        />
-      );
-    }
-
-    return <Skill tooltipTextOverride={blankText} size={size} key={blankText} />;
-  }
-
-  componentWillMount () {
-    const { ids, fetchSkills } = this.props;
-
-    fetchSkills && fetchSkills(ids);
-  }
-
-  render () {
-    const { ids, skills, className, blankText, size, ...props } = this.props;
-
-    return (
-      <div className={className}>
-        {ids.map((id) => SkillsEmbed.renderSkill(id, skills, blankText, size, props))}
-      </div>
-    );
-  }
-}
+const SkillsEmbed = ({ ids, skills, className, blankText, size, ...props }: Props) => (
+  <div className={className}>
+    {ids.map((id, index) => (id >= 0 ? (
+      <Gw2Skill
+        // eslint-disable-next-line react/no-array-index-key
+        key={index}
+        className={styles.skill}
+        id={id}
+        size={size}
+        {...props}
+      />
+    ) : (
+      <Gw2Skill
+        // eslint-disable-next-line react/no-array-index-key
+        key={index}
+        tooltipTextOverride={blankText}
+        size={size}
+      />
+    )))}
+  </div>
 );
+
+export default SkillsEmbed;

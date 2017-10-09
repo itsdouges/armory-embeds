@@ -3,7 +3,7 @@
 import type { EmbedProps } from '../../bootstrap';
 
 import React from 'react';
-import { Gw2Item, Item } from 'armory-component-ui';
+import { Gw2Item } from 'armory-component-ui';
 
 import styles from './styles.less';
 
@@ -28,27 +28,27 @@ const ItemsEmbed = ({
   ...props
 }: Props) => (
   <div className={className}>
-    {ids.map((id, index) => {
-      if (id < 0) {
+    {ids.map((id, index) => (id >= 0 ? (
+      <Gw2Item
         // eslint-disable-next-line react/no-array-index-key
-        return <Item key={`${index}-${id}`} tooltipTextOverride={blankText} size={size} />;
-      }
-
-      return (
-        <Gw2Item
-          // eslint-disable-next-line react/no-array-index-key
-          key={`${index}-${id}`}
-          id={id}
-          statsId={statIds[id]}
-          skinId={skinIds[id]}
-          name={mode === 'rune' ? 'Rune' : undefined}
-          tooltipType={mode === 'rune' ? 'amulets' : undefined}
-          size={size}
-          className={styles.item}
-          {...props}
-        />
-      );
-    })}
+        key={index}
+        id={id}
+        statsId={statIds[id]}
+        skinId={skinIds[id]}
+        name={mode === 'rune' ? 'Rune' : undefined}
+        tooltipType={mode === 'rune' ? 'amulets' : undefined}
+        size={size}
+        className={styles.item}
+        {...props}
+      />
+    ) : (
+      <Gw2Item
+        // eslint-disable-next-line react/no-array-index-key
+        key={index}
+        tooltipTextOverride={blankText}
+        size={size}
+      />
+    )))}
   </div>
 );
 
