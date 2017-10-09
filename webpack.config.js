@@ -4,7 +4,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const paths = require('./config/paths');
-const peerDependencies = require('./package.json').peerDependencies;
 
 const config = {
   bail: true,
@@ -18,12 +17,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    libraryTarget: 'commonjs-module',
   },
-
-  externals: Object.keys(peerDependencies).concat([
-    /^lodash\/.+$/,
-  ]),
 
   module: {
     strictExportPresence: true,
