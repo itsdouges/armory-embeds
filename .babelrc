@@ -1,0 +1,39 @@
+{
+  "presets": [
+    "react",
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": [">1%", "last 4 versions", "not ie < 11", "Firefox ESR"]
+      }
+    }]
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "syntax-dynamic-import"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        "react",
+        ["env", {
+          "targets": {
+            "browsers": [">1%", "last 4 versions", "not ie < 11", "Firefox ESR"]
+          }
+        }]
+      ],
+      "plugins": [
+        "istanbul",
+        "dynamic-import-node",
+        "transform-class-properties",
+        "transform-object-rest-spread"
+      ]
+    },
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements"
+      ]
+    }
+  }
+}

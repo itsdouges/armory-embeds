@@ -1,0 +1,16 @@
+language: node_js
+node_js: "8"
+script: npm run test && npm run build
+cache:
+  yarn: true
+  directories:
+    - node_modules
+before_deploy: cd dist
+deploy:
+  provider: npm
+  skip_cleanup: true
+  email: "laheen@gmail.com"
+  api_key: $NPM_KEY
+  on:
+    tags: true
+after_success: npm run codecov

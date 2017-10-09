@@ -1,0 +1,21 @@
+{
+  "assets/gw2a--2Mlif.png": "assets/gw2a--2Mlif.png",
+  "assets/gw2a--2xxYo.png": "assets/gw2a--2xxYo.png",
+  "assets/gw2a--yHqmo.png": "assets/gw2a--yHqmo.png",
+  "assets/menomonia.ttf": "assets/menomonia.ttf",
+  "assets/menomonia.woff": "assets/menomonia.woff",
+  "assets/opensans-light.ttf": "assets/opensans-light.ttf",
+  "assets/opensans-semibold.ttf": "assets/opensans-semibold.ttf",
+  "assets/opensans.ttf": "assets/opensans.ttf",
+  "manager.js": "static/manager.466ed4bfd646184b55d7.bundle.js",
+  "preview.css": "gw2a-embeds.css",
+  "preview.css.map": "gw2a-embeds.css.map",
+  "preview.js": "static/preview.871b044bd38e5a3b0662.bundle.js",
+  "static/0.6f4e850e35c8685161a8.bundle.js": "static/0.6f4e850e35c8685161a8.bundle.js",
+  "static/1.240a42eec0f849427a73.bundle.js": "static/1.240a42eec0f849427a73.bundle.js",
+  "static/2.27834cb127bcad151122.bundle.js": "static/2.27834cb127bcad151122.bundle.js",
+  "static/3.6f626d43e0054ba23c34.bundle.js": "static/3.6f626d43e0054ba23c34.bundle.js",
+  "static/4.ad7f5e48610d5f18c173.bundle.js": "static/4.ad7f5e48610d5f18c173.bundle.js",
+  "static/5.71d72e3b271fb359be94.bundle.js": "static/5.71d72e3b271fb359be94.bundle.js",
+  "static/6.a16178b6249f461e3c70.bundle.js": "static/6.a16178b6249f461e3c70.bundle.js"
+}

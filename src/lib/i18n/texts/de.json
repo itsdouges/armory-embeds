@@ -1,0 +1,43 @@
+{
+  "words": {
+    "title": "Titel",
+    "objectives": "Ziele"
+  },
+  "items": {
+    "transmuted": "Transmutiert",
+    "skinLocked": "Skin gesperrt",
+    "requiredLevel": "Benötigtes Level",
+    "weaponStrength": "Waffenstärke",
+    "defense": "Verteidigung",
+    "currentlyEquipped": "Aktuell ausgerüstet",
+    "accountBound": "Accountgebunden",
+    "soulBound": "Seelengebunden"
+  },
+  "characters": {
+    "noSkill": "Keine Fertigkeit ausgewälht"
+  },
+  "itemAttributes": {
+    "power": "Kraft",
+    "precision": "Präzision",
+    "toughness": "Zähigkeit",
+    "vitality": "Vitalität",
+    "boonDuration": "Segensdauer",
+    "conditionDamage": "Zustandsschaden",
+    "conditionDuration": "Zustandsdauer",
+    "ferocity": "Wildheit",
+    "healingPower": "Heilkraft",
+    "armor": "Rüstung",
+    "critChance": "Kritische Trefferchance",
+    "critDamage": "Kritischer Schaden",
+    "health": "Lebenspunkte",
+    "expertise": "Fachkenntnis",
+    "healing": "Healing",
+    "concentration": "Konzentration",
+    "agonyResistance": "Qual-Widerstand",
+    "magic": "Magisches Gespür"
+  },
+  "messages": {
+    "gw2ApiDown": "Es gibt derzeit Probleme mit der offiziellen GW2-API, die auch deine Sitzung beeinflussen könnten!",
+    "notFoundLong": "Nicht gefunden (oder die GW2-API funktioniert derzeit nicht einwandfrei)!"
+  }
+}

@@ -1,0 +1,37 @@
+[ignore]
+# https://github.com/facebook/fbjs/issues/64
+.*/node_modules/fbjs.*
+.*/node_modules/config-chain/test/broken.json
+.*/node_modules/npm/test/.*
+config/
+scripts/
+<PROJECT_ROOT>/node_modules/function-batch/index.js.flow
+<PROJECT_ROOT>/node_modules/react-scroll-paginator/ReactScrollPaginator.js.flow
+<PROJECT_ROOT>/node_modules/react-scroll-paginator/index.js.flow
+<PROJECT_ROOT>/node_modules/react-debounce-decorator/debounceDecorator.js.flow
+<PROJECT_ROOT>/node_modules/editions/es2015/index.js
+<PROJECT_ROOT>/node_modules/react-debounce-decorator/index.js.flow
+.*/node_modules/radium/.*
+
+[include]
+
+[libs]
+flow-typed/
+flow/libdefs/
+
+[options]
+# Allow dynamic require statements
+module.ignore_non_literal_requires=true
+
+# Stub out less files so flow can import them
+module.name_mapper.extension='less' -> '<PROJECT_ROOT>/flow/CSSModule.js.flow'
+
+# Map for absolute paths
+module.name_mapper='^assets\/\(.*\)' -> '<PROJECT_ROOT>/src/assets/\1'
+module.name_mapper='^common\/\(.*\)' -> '<PROJECT_ROOT>/src/common/\1'
+module.name_mapper='^features\/\(.*\)' -> '<PROJECT_ROOT>/src/features/\1'
+module.name_mapper='^embeds\/\(.*\)' -> '<PROJECT_ROOT>/src/embeds/\1'
+module.name_mapper='^lib\/\(.*\)' -> '<PROJECT_ROOT>/src/lib/\1'
+module.name_mapper='^config$' -> '<PROJECT_ROOT>/src/config'
+module.name_mapper='^flowTypes$' -> '<PROJECT_ROOT>/src/flowTypes'
+module.name_mapper='^test\/\(.*\)' -> '<PROJECT_ROOT>/test/\1'
