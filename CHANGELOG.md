@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
+
+## [0.1.1][] - 2017-10-10
 ### Changed
 - gw2aEmbeds to armory-embeds
 - Readme information
@@ -17,5 +19,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial commit
 
-[Unreleased]: https://github.com/madou/armory-embeds/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/madou/armory-embeds/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/madou/armory-embeds/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/madou/armory-embeds/tree/v0.1.0
