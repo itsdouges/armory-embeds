@@ -44,7 +44,7 @@ module.exports = {
               options: {
                 modules: true,
                 importLoaders: '1',
-                localIdentName: 'gw2a--[hash:base64:5]',
+                localIdentName: '[path][name]--[local]',
               },
             },
             'less-loader',

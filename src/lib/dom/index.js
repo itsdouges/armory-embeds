@@ -1,12 +1,6 @@
 // @flow
 
-export function addScript (src: string) {
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = src;
-  window.document.head.appendChild(script);
-}
-
+// eslint-disable-next-line import/prefer-default-export
 export function addStyleSheet (src: string) {
   const style = document.createElement('link');
   style.href = src;
