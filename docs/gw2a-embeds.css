@@ -1,13 +1,13 @@
-.gw2a--1FcDa {
+.src-styles--tooltip {
   line-height: 1.15;
 }
-.gw2a--1FcDa * {
+.src-styles--tooltip * {
   box-sizing: border-box;
 }
-.gw2a--3ZW5E {
+.src-styles--embed {
   line-height: 0;
 }
-.gw2a--3ZW5E * {
+.src-styles--embed * {
   box-sizing: border-box;
 }
 @font-face {
@@ -34,13 +34,13 @@
   font-weight: bold;
   font-style: normal;
 }
-.gw2a--3lXGh {
+.src-components-Amulets-styles--item {
   display: inline-block;
 }
-.gw2a--11rU1 {
+.src-components-Items-styles--item {
   display: inline-block;
 }
-.gw2a--3u_DO {
+.src-components-Skills-styles--skill {
   display: inline-block;
 }
 

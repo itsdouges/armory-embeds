@@ -1,6 +1,7 @@
 const autoprefixer = require('autoprefixer');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const paths = require('../config/paths');
 
 // you can use this file to add your custom webpack plugins, loaders and anything you like.
@@ -21,6 +22,11 @@ module.exports = {
       filename: 'gw2a-embeds.css',
       allChunks: true,
     }),
+
+    new CopyWebpackPlugin([{
+      from: 'node_modules/armory-component-ui/images',
+      to: 'images',
+    }]),
   ],
 
   module: {

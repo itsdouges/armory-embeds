@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const paths = require('./config/paths');
 
 const config = {
@@ -109,6 +110,11 @@ const config = {
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
     }),
+
+    new CopyWebpackPlugin([{
+      from: 'node_modules/armory-component-ui/images',
+      to: 'images',
+    }]),
   ],
 };
 
