@@ -1,8 +1,10 @@
 import { shallow } from 'enzyme';
-import { stubComponent, stubStyles } from 'test/utils';
+import proxyquire from 'proxyquire';
+import { stubComponent, stubStyles } from '../test/utils';
 
-const Base = stubComponent('Base');
+const Store = stubComponent('Store');
 const Embed = stubComponent('Embed');
+const Tooltip = stubComponent('Tooltip');
 
 const styles = stubStyles([
   'embed',
@@ -10,8 +12,7 @@ const styles = stubStyles([
 
 const sandbox = sinon.sandbox.create();
 const bootstrapTooltip = sinon.spy();
-const resetLs = sandbox.spy();
-const axiosGet = sandbox.stub();
+const httpGet = sandbox.stub();
 const render = sandbox.spy();
 const translate = sandbox.stub();
 const addStyleSheet = sandbox.spy();
@@ -20,29 +21,16 @@ const setLang = sandbox.spy();
 const createEmbed = sandbox.stub();
 const embedName = 'traits';
 
-const bootstrap = proxyquire('embeds/bootstrap', {
-  'lib/localStorage': {
-    reset: resetLs,
-  },
-  '../Base': Base,
+const bootstrap = proxyquire.noPreserveCache().noCallThru()('./bootstrap', {
+  'react-dom': { render },
+  'armory-component-ui': { Tooltip },
+  '!!style-loader!css-loader!armory-component-ui/styles.css': {},
+  axios: { get: httpGet },
+  'i18n-react': { translate },
+  './lib/dom': { addStyleSheet },
+  './Store': Store,
   './styles.less': styles,
-  'react-dom': {
-    render,
-  },
-  axios: {
-    get: axiosGet,
-  },
-  'i18n-react': {
-    translate,
-  },
-  'lib/dom': {
-    addStyleSheet,
-  },
-  'lib/i18n': {
-    set: setLang,
-  },
-  'lib/tooltip': bootstrapTooltip,
-  [`embeds/creators/${embedName}`]: { default: createEmbed },
+  [`./creators/${embedName}`]: { default: createEmbed },
 });
 
 describe('embed bootstrapper', () => {
@@ -61,7 +49,7 @@ describe('embed bootstrapper', () => {
 
   beforeEach(() => {
     delete document.GW2A_EMBED_OPTIONS;
-    axiosGet.withArgs(`${publicPath}asset-manifest.json`).returns(Promise.resolve({ data: manifest }));
+    httpGet.withArgs(`${publicPath}asset-manifest.json`).returns(Promise.resolve({ data: manifest }));
   });
 
   afterEach(() => sandbox.reset());

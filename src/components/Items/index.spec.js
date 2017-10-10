@@ -1,24 +1,19 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { stubComponent, stubStyles } from 'test/utils';
+import proxyquire from 'proxyquire';
+import { stubComponent, stubStyles } from '../../../test/utils';
 
 const styles = stubStyles([
   'item',
 ]);
 
-const sandbox = sinon.sandbox.create();
-const applyAttributes = sandbox.stub();
 const Item = stubComponent('Item');
 const Gw2Item = stubComponent('Gw2Item');
 
-const stubs = {
-  'common/components/Item': Item,
-  'common/components/Gw2Item': Gw2Item,
-  'lib/gw2/itemStats': applyAttributes,
+const ItemsEmbed = proxyquire.noPreserveCache().noCallThru()('./', {
+  'armory-component-ui': { Gw2Item },
   './styles.less': styles,
-};
-
-const ItemsEmbed = proxyquire('embeds/components/Items', stubs);
+});
 
 describe('<Items /> embed', () => {
   const props = {
