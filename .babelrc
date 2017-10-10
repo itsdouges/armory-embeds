@@ -2,9 +2,10 @@
   "presets": [
     "react",
     ["env", {
+      "useBuiltIns": true,
       "modules": false,
       "targets": {
-        "browsers": [">1%", "last 4 versions", "not ie < 11", "Firefox ESR"]
+        "browsers": [">1%", "last 2 versions", "not ie < 11", "Firefox ESR"]
       }
     }]
   ],
@@ -18,8 +19,9 @@
       "presets": [
         "react",
         ["env", {
+          "useBuiltIns": true,
           "targets": {
-            "browsers": [">1%", "last 4 versions", "not ie < 11", "Firefox ESR"]
+            "browsers": [">1%", "last 2 versions", "not ie < 11", "Firefox ESR"]
           }
         }]
       ],

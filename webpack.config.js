@@ -11,12 +11,13 @@ const config = {
   context: __dirname,
 
   entry: {
-    'armory-component-ui': './src/index.js',
+    gw2aEmbeds: './src/index.js',
   },
 
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
+    chunkFilename: '[name]-chunk.[chunkhash:8].js',
   },
 
   module: {
@@ -51,14 +52,14 @@ const config = {
         loader: 'url-loader',
         options: {
           limit: 100,
-          name: 'images/gw2a--[hash:base64:5].[ext]',
+          name: 'images/gw2a--[hash:base64:8].[ext]',
         },
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]',
+          name: '[name].[hash:8].[ext]',
         },
       },
     ],
@@ -67,12 +68,37 @@ const config = {
   plugins: [
     new ManifestPlugin({
       fileName: 'embeds-manifest.json',
+      // We only care about the styles name, which we used
+      // to dynamically load css on page load.
+      filter: ({ name }) => name === 'gw2aEmbeds.css',
+    }),
+
+    new webpack.optimize.CommonsChunkPlugin({
+      minChunks: 2,
+      async: true,
+    }),
+
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      parallel: true,
+      compress: {
+        screw_ie8: true,
+        warnings: false,
+        reduce_vars: false,
+      },
+      mangle: {
+        screw_ie8: true,
+      },
+      output: {
+        comments: false,
+        screw_ie8: true,
+      },
     }),
 
     new webpack.optimize.ModuleConcatenationPlugin(),
 
     new ExtractTextPlugin({
-      filename: 'gw2a-embeds.css',
+      filename: 'gw2a-embeds.[contenthash:8].css',
       allChunks: true,
     }),
 

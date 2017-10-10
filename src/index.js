@@ -1,7 +1,5 @@
 // @flow
 
-import 'babel-polyfill';
-
 const findScriptBaseUrl = () => {
   const scripts = document.getElementsByTagName('script');
   for (let i = 0; i < scripts.length; i++) {
