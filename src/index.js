@@ -10,6 +10,8 @@ const findScriptBaseUrl = () => {
       return script.src.replace('/gw2aEmbeds.js', '');
     }
   }
+
+  throw new Error('Could not find gw2aEmbeds script.');
 };
 
 const init = () => {

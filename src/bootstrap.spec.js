@@ -8,15 +8,14 @@ const Tooltip = stubComponent('Tooltip');
 
 const styles = stubStyles([
   'embed',
+  'tooltip',
 ]);
 
 const sandbox = sinon.sandbox.create();
-const bootstrapTooltip = sinon.spy();
 const httpGet = sandbox.stub();
 const render = sandbox.spy();
 const translate = sandbox.stub();
 const addStyleSheet = sandbox.spy();
-const setLang = sandbox.spy();
 
 const createEmbed = sandbox.stub();
 const embedName = 'traits';
@@ -31,16 +30,15 @@ const bootstrap = proxyquire.noPreserveCache().noCallThru()('./bootstrap', {
   './Store': Store,
   './styles.less': styles,
   [`./creators/${embedName}`]: { default: createEmbed },
-});
+}).default;
 
 describe('embed bootstrapper', () => {
-  const publicPath = 'htts://gw2armory.com/';
   const manifest = {
     'gw2aEmbeds.css': 'gw2aEmbeds.css',
   };
 
   before(() => {
-    global.__webpack_public_path__ = publicPath;
+    global.__webpack_public_path__ = 'https://npm-package.com/';
   });
 
   after(() => {
@@ -49,41 +47,12 @@ describe('embed bootstrapper', () => {
 
   beforeEach(() => {
     delete document.GW2A_EMBED_OPTIONS;
-    httpGet.withArgs(`${publicPath}asset-manifest.json`).returns(Promise.resolve({ data: manifest }));
+    httpGet
+      .withArgs(`${global.__webpack_public_path__}embeds-manifest.json`)
+      .returns(Promise.resolve({ data: manifest }));
   });
 
   afterEach(() => sandbox.reset());
-
-  describe('tooltip', () => {
-    beforeEach(() => {
-      bootstrap();
-    });
-
-    it('should render tooltip', () => {
-      expect(bootstrapTooltip).to.have.been.calledWith({
-        showBadge: true,
-        className: 'embed-style gw2a-tooltip-embed',
-      });
-    });
-  });
-
-  describe('global options', () => {
-    it('should default lang to en', () => {
-      bootstrap();
-
-      expect(setLang).to.have.been.calledWith('en');
-    });
-
-    it('should override lang if passed in', () => {
-      document.GW2A_EMBED_OPTIONS = {
-        lang: 'de',
-      };
-
-      bootstrap();
-
-      expect(setLang).to.have.been.calledWith('de');
-    });
-  });
 
   describe('style fetching', () => {
     it('should fetch styles using manifest.json and add it to head', async () => {

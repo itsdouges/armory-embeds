@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import cx from 'classnames';
 import axios from 'axios';
 import T from 'i18n-react';
-// import { Tooltip } from 'armory-component-ui';
+import { Tooltip } from 'armory-component-ui';
 // $FlowFixMe
 import '!!style-loader!css-loader!armory-component-ui/styles.css'; // eslint-disable-line
 

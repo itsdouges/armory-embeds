@@ -7,13 +7,12 @@ const styles = stubStyles([
   'item',
 ]);
 
-const Item = stubComponent('Item');
 const Gw2Item = stubComponent('Gw2Item');
 
 const ItemsEmbed = proxyquire.noPreserveCache().noCallThru()('./', {
   'armory-component-ui': { Gw2Item },
   './styles.less': styles,
-});
+}).default;
 
 describe('<Items /> embed', () => {
   const props = {
@@ -72,7 +71,7 @@ describe('<Items /> embed', () => {
         extra: true,
       });
 
-      expect(wrapper.find(Item).props()).to.include({
+      expect(wrapper.find(Gw2Item).at(2).props()).to.include({
         tooltipTextOverride: props.blankText,
         size: props.size,
       });
