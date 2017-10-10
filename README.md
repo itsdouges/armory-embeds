@@ -62,7 +62,7 @@ Each embed has a class that you can target, each class follows the pattern `.gw2
 
 ## Embeds
 
-### [Skills](https://gw2armory.com/embeds#skills)
+### [Skills](https://madou.github.io/armory-embeds/?selectedKind=Skills)
 
 <img src="https://user-images.githubusercontent.com/6801309/30039214-7078b6c4-9211-11e7-8d93-b93f870fc032.png" width="400" />
 
@@ -89,7 +89,7 @@ Each embed has a class that you can target, each class follows the pattern `.gw2
 | data-armory-blank-text | string | no | When loading an skill of id `-1` you can override the tooltip text to be whatever you want. |
 | data-armory-inline-text | string | no | Optional inline text that will be displayed to the right of the icon. You can pass in `wiki` to use a gw2 wiki URL, or pass in any other text that will be used as the link. |
 
-### [Items](https://gw2armory.com/embeds#items)
+### [Items](https://madou.github.io/armory-embeds/?selectedKind=Items)
 
 <img src="https://user-images.githubusercontent.com/6801309/30039226-84ce7dc0-9211-11e7-9df7-693fb8921300.png" width="400" />
 
@@ -120,7 +120,7 @@ Each embed has a class that you can target, each class follows the pattern `.gw2
 | data-armory-{ITEM_ID}-skin | number | no | Loads the item with the skin of choice. |
 | data-armory-inline-text | string | no | Optional inline text that will be displayed to the right of the icon. You can pass in `wiki` to use a gw2 wiki URL, `gw2spidy` to use a gw2spidy URL, or pass in any other text that will be used as the link. |
 
-### [Specializations](https://gw2armory.com/embeds#specializations)
+### [Specializations](https://madou.github.io/armory-embeds/?selectedKind=Specializations)
 
 <img src="https://user-images.githubusercontent.com/6801309/30039237-9ba20c1a-9211-11e7-8e57-8b2efffe5304.png" width="400" />
 
@@ -160,7 +160,7 @@ Each embed has a class that you can target, each class follows the pattern `.gw2
 | data-armory-blank-text | string | no | When loading an trait of id `-1` you can override the tooltip text to be whatever you want. |
 | data-armory-inline-text | string | no | Optional inline text that will be displayed to the right of the icon. You can pass in `wiki` to use a gw2 wiki URL, or pass in any other text that will be used as the link. |
 
-### [Amulets](https://gw2armory.com/embeds#amulets)
+### [Amulets](https://madou.github.io/armory-embeds/?selectedKind=Amulets)
 
 <img src="https://user-images.githubusercontent.com/6801309/30039246-bb506ffc-9211-11e7-981e-1fa5d62342a7.png" width="400" />
 
