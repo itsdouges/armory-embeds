@@ -22,7 +22,7 @@ const embedName = 'traits';
 
 const bootstrap = proxyquire.noPreserveCache().noCallThru()('./bootstrap', {
   'react-dom': { render },
-  'armory-component-ui': { Tooltip },
+  'armory-component-ui': { Tooltip, persistToLocalStorage: () => {} },
   '!!style-loader!css-loader!armory-component-ui/styles.css': {},
   axios: { get: httpGet },
   'i18n-react': { translate },
