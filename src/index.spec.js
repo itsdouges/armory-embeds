@@ -1,6 +1,6 @@
 import proxyquire from 'proxyquire';
 
-const baseUrl = 'https://npm-packages.com/yolo';
+const baseUrl = 'https://npm-packages.com/yolo/';
 const bootstrap = sinon.spy();
 
 const initialise = () => proxyquire.noPreserveCache().noCallThru()('./', {
@@ -17,7 +17,7 @@ describe('embed entrypoint', () => {
   before(() => {
     global.__webpack_public_path__ = 'notsetyet';
     script = document.createElement('script');
-    script.src = `${baseUrl}/armory-embeds.js`;
+    script.src = `${baseUrl}armory-embeds.js`;
     global.document.head.appendChild(script);
   });
 

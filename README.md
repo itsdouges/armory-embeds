@@ -220,4 +220,9 @@ Hit [@itsmadou](https://twitter.com/itsmadou) up on twitter, or [post an issue](
 ### Getting started
 
 ```sh
+git clone git@github.com:madou/armory-embeds.git
+cd armory-embeds
+yarn install
+npm run tdd # Run tests in watch mode
+npm start # Run react storybook for local development
 ```

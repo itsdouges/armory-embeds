@@ -5,7 +5,7 @@ const findScriptBaseUrl = () => {
   for (let i = 0; i < scripts.length; i++) {
     const script = scripts[i];
     if (script.src.includes('armory-embeds.js')) {
-      return script.src.replace('/armory-embeds.js', '');
+      return script.src.replace('armory-embeds.js', '');
     }
   }
 
