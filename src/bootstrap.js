@@ -32,7 +32,7 @@ export const makeAttribute = (str: string) => `data-armory-${str}`;
 function fetchStyles () {
   return axios.get(`${__webpack_public_path__}embeds-manifest.json`)
     .then((response) => {
-      const styleSheetPath = response.data['gw2aEmbeds.css'];
+      const styleSheetPath = response.data['armory-embeds.css'];
       if (styleSheetPath) {
         addStyleSheet(`${__webpack_public_path__}${styleSheetPath}`);
       }

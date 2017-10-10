@@ -17,7 +17,7 @@ describe('embed entrypoint', () => {
   before(() => {
     global.__webpack_public_path__ = 'notsetyet';
     script = document.createElement('script');
-    script.src = `${baseUrl}/gw2aEmbeds.js`;
+    script.src = `${baseUrl}/armory-embeds.js`;
     global.document.head.appendChild(script);
   });
 

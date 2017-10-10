@@ -34,7 +34,7 @@ const bootstrap = proxyquire.noPreserveCache().noCallThru()('./bootstrap', {
 
 describe('embed bootstrapper', () => {
   const manifest = {
-    'gw2aEmbeds.css': 'gw2aEmbeds.css',
+    'armory-embeds.css': 'armory-embeds.css',
   };
 
   before(() => {
@@ -58,7 +58,7 @@ describe('embed bootstrapper', () => {
     it('should fetch styles using manifest.json and add it to head', async () => {
       await bootstrap();
 
-      expect(addStyleSheet).to.have.been.calledWith(`${global.__webpack_public_path__}${manifest['gw2aEmbeds.css']}`);
+      expect(addStyleSheet).to.have.been.calledWith(`${global.__webpack_public_path__}${manifest['armory-embeds.css']}`);
     });
   });
 

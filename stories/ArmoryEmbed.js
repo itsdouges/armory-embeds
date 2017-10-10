@@ -55,7 +55,7 @@ ${Object.keys(props).map((prop) => `  ${prop}="${props[prop]}"`).join('\n')}
 >
 </div>
 
-<script async src="https://gw2armory.com/gw2aEmbeds.js"></script>
+<script async src="https://gw2armory.com/armory-embeds.js"></script>
 `}
         </Highlight>
       </span>

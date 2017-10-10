@@ -11,7 +11,7 @@ const config = {
   context: __dirname,
 
   entry: {
-    gw2aEmbeds: './src/index.js',
+    'armory-embeds': './src/index.js',
   },
 
   output: {
@@ -70,7 +70,7 @@ const config = {
       fileName: 'embeds-manifest.json',
       // We only care about the styles name, which we used
       // to dynamically load css on page load.
-      filter: ({ name }) => name === 'gw2aEmbeds.css',
+      filter: ({ name }) => name === 'armory-embeds.css',
     }),
 
     new webpack.optimize.CommonsChunkPlugin({
