@@ -30,7 +30,7 @@ When the document has fully loaded the embeds will then be loaded.
 
 ## Supplementary Libraries
 
-- [armory-embeds-game-link](https://github.com/madou/armory-embeds-game-link) - parses an ingame link to armory embed markup.
+- [armory-embeds-chat-codes](https://github.com/madou/armory-embeds-chat-code) - parses an ingame chat code to armory embed markup.
 
 ## Configuration
 
