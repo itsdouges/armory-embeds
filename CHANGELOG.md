@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][]
 ### Changed
 - Path to entrypoint
+- Upgrades deps
 
 ## [0.2.1][] - 2017-10-11
 ### Changed

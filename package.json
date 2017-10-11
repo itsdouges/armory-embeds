@@ -27,7 +27,7 @@
     "smoke-run-prod": "npm run build && http-server ./ & opn http://127.0.0.1:8080/test/smoke.html?prod"
   },
   "dependencies": {
-    "armory-component-ui": "^0.4.1",
+    "armory-component-ui": "^0.4.2",
     "axios": "^0.16.2",
     "classnames": "^2.2.5",
     "function-batch": "^1.1.2",
