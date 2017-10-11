@@ -23,7 +23,7 @@ First add the embeds to your html:
 Then add the embed script after them:
 
 ```html
-<script async src="https://gw2armory.com/armory-embeds.js"></script>
+<script async src="https://unpkg.com/armory-embeds/armory-embeds.js"></script>
 ```
 
 When the document has fully loaded the embeds will then be loaded.
