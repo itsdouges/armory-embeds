@@ -44,7 +44,7 @@ Make sure the assign this config _before_ declaring the `gw2a` script.
 | prop | type | required | description |
 |-|-|-|-|
 | lang | string | no | The language the embeds will be loaded in. Supported values are: en, fr, de, es, zh, ru |
-| persistToLocalStorage | boolean | no | Turns data persistence on or off. Default to false. |
+| persistToLocalStorage | boolean | no | Turns data persistence on or off. Default to true. |
 
 ```javascript
 document.GW2A_EMBED_OPTIONS = {
