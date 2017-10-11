@@ -14,6 +14,8 @@ const findScriptBaseUrl = () => {
 
 const init = () => {
   __webpack_public_path__ = findScriptBaseUrl();
+  // $FlowFixMe
+  document.__publicPath = __webpack_public_path__;
 
   import('./bootstrap').then((module) => module.default());
 };
