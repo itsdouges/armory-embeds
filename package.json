@@ -23,7 +23,8 @@
     "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md",
     "postversion": "git push && git push --tags",
     "build-storybook": "rm -rf docs && build-storybook --output-dir docs",
-    "smoke-run": "npm run build && http-server ./ & opn http://127.0.0.1:8080/test/smoke.html"
+    "smoke-run": "npm run build && http-server ./ & opn http://127.0.0.1:8080/test/smoke.html",
+    "smoke-run-prod": "npm run build && http-server ./ & opn http://127.0.0.1:8080/test/smoke.html?prod"
   },
   "dependencies": {
     "armory-component-ui": "^0.4.1",

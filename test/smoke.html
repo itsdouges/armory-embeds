@@ -246,6 +246,15 @@ document.GW2A_EMBED_OPTIONS = {
       </div>
     </div>
 
-    <script async src="../dist/armory-embeds.js"></script>
+    <script>
+      const scriptPath = window.location.search.includes('prod')
+        ? 'https://unpkg.com/armory-embeds/armory-embeds.js'
+        : '../dist/armory-embeds.js';
+
+      const script = document.createElement('script');
+      script.src = scriptPath;
+      script.async = true;
+      document.body.appendChild(script);
+    </script>
   </body>
 </html>
