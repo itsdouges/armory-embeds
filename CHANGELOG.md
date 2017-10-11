@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
+
+## [0.2.1][] - 2017-10-11
 ### Changed
 - `armory-component-ui` dep
 - Set `__publicPath` global variable
@@ -33,7 +35,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial commit
 
-[Unreleased]: https://github.com/madou/armory-embeds/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/madou/armory-embeds/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/madou/armory-embeds/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/madou/armory-embeds/compare/v0.1.2...v0.2.0
 [0.1.2]: https://github.com/madou/armory-embeds/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/madou/armory-embeds/compare/v0.1.0...v0.1.1
