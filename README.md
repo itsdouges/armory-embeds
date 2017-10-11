@@ -232,3 +232,5 @@ yarn install
 npm run tdd # Run tests in watch mode
 npm start # Run react storybook for local development
 ```
+
+© 2015-present gw2armory.com
