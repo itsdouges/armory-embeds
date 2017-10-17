@@ -5,6 +5,7 @@
 [![Build Status](http://img.shields.io/travis/madou/armory-embeds/master.svg?style=flat-square)](https://travis-ci.org/madou/armory-embeds)
 [![codecov](https://codecov.io/gh/madou/armory-embeds/branch/master/graph/badge.svg)](https://codecov.io/gh/madou/armory-embeds)
 [![Dependency Status](http://img.shields.io/david/madou/armory-embeds.svg?style=flat-square)](https://david-dm.org/madou/armory-embeds)
+[![Discord](https://img.shields.io/badge/discord-GW2Armory-blue.svg)](https://discord.gg/3BRbV7b)
 
 Guild Wars 2 Armory is arming the GW2 community with powered up embeds for items, skills, and more. Currently serving over 6 million requests a month and growing!
 
