@@ -23,10 +23,12 @@ First add the embeds to your html:
 Then add the embed script after them:
 
 ```html
-<script async src="https://unpkg.com/armory-embeds/armory-embeds.js"></script>
+<script async src="https://unpkg.com/armory-embeds@^0.x.x/armory-embeds.js"></script>
 ```
 
 When the document has fully loaded the embeds will then be loaded.
+
+Note the semvar range. When breaking changes are introduced, this will be incremented by one every time. For example from `@^0.x.x` to `@^1.x.x`.
 
 ## Supplementary Libraries
 
