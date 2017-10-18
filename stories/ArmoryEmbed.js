@@ -5,6 +5,7 @@ import Highlight from 'react-highlight';
 // $FlowFixMe
 import '!!style-loader!css-loader!highlight.js/styles/monokai-sublime.css'; // eslint-disable-line
 import bootstrap from '../src/bootstrap';
+import { version } from '../package.json';
 
 const generateOptionsMarkup = (options) => {
   const values = Object.keys(options).map((option) => `  ${option}: ${JSON.stringify(options[option])}`).join('\n,');
@@ -55,7 +56,7 @@ ${Object.keys(props).map((prop) => `  ${prop}="${props[prop]}"`).join('\n')}
 >
 </div>
 
-<script async src="https://unpkg.com/armory-embeds@^0.x.x/armory-embeds.js"></script>
+<script async src="https://unpkg.com/armory-embeds@^${version[0]}.x.x/armory-embeds.js"></script>
 `}
         </Highlight>
       </span>
