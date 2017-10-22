@@ -12,6 +12,8 @@ type Props = {
   mode?: 'rune' | 'item',
   statIds: { [key: number]: number },
   skinIds: { [key: number]: number },
+  upgradeIds: { [key: number]: Array<number> },
+  infusionIds: { [key: number]: Array<number> },
 } & EmbedProps;
 
 const ItemsEmbed = ({
@@ -25,6 +27,8 @@ const ItemsEmbed = ({
   size,
   skins,
   skinIds,
+  upgradeIds,
+  infusionIds,
   ...props
 }: Props) => (
   <div className={className}>
@@ -39,6 +43,8 @@ const ItemsEmbed = ({
         tooltipType={mode === 'rune' ? 'amulets' : undefined}
         size={size}
         className={styles.item}
+        upgrades={upgradeIds[id]}
+        infusions={infusionIds[id]}
         {...props}
       />
     ) : (
@@ -51,5 +57,10 @@ const ItemsEmbed = ({
     )))}
   </div>
 );
+
+ItemsEmbed.defaultProps = {
+  upgradeIds: {},
+  infusionIds: {},
+};
 
 export default ItemsEmbed;

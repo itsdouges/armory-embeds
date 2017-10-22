@@ -10,6 +10,14 @@ import ArmoryEmbed from './ArmoryEmbed';
 // Disable local storage so we catch any possible bugs before hitting prod.
 persistToLocalStorage(false);
 
+storiesOf('Character', module)
+.add('default', () =>
+  <ArmoryEmbed
+    name="character"
+    data-armory-name="Quartermile"
+  />
+);
+
 storiesOf('Items', module)
 .add('default', () =>
   <ArmoryEmbed
@@ -57,6 +65,20 @@ storiesOf('Items', module)
     name="items"
     data-armory-ids="77482"
     data-armory-77482-stat="656"
+  />
+)
+.add('with upgrades', () =>
+  <ArmoryEmbed
+    name="items"
+    data-armory-ids="1379"
+    data-armory-1379-upgrades="24615,24815"
+  />
+)
+.add('with infusions', () =>
+  <ArmoryEmbed
+    name="items"
+    data-armory-ids="1379"
+    data-armory-1379-infusions="49426,49426"
   />
 );
 

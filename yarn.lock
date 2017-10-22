@@ -313,9 +313,9 @@ argv@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/argv/-/argv-0.0.2.tgz#ecbd16f8949b157183711b1bda334f37840185ab"
 
-armory-component-ui@^0.4.2:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/armory-component-ui/-/armory-component-ui-0.4.3.tgz#181f215ba9da8aa045d2018feb5dee28416a7c3e"
+armory-component-ui@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/armory-component-ui/-/armory-component-ui-0.5.1.tgz#becc83442c5190c6a959e05338a184e72bf9be90"
 
 arr-diff@^2.0.0:
   version "2.0.0"
