@@ -52,7 +52,7 @@ export default class ArmoryEmbed extends React.Component<*> {
         <Highlight className="html">
           {`${options ? generateOptionsMarkup(options) : ''}<div
   data-armory-embed="${name}"
-${Object.keys(props).map((prop) => `  ${prop}="${props[prop]}"`).join('\n')}
+${Object.keys(props).map((prop) => `  ${prop}=${JSON.stringify(props[prop])}`).join('\n')}
 >
 </div>
 
