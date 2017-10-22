@@ -1,6 +1,6 @@
 {
   "name": "armory-embeds",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Guild Wars 2 Armory Embeds",
   "pre-commit": [
     "test"
