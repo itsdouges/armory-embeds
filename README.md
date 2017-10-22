@@ -35,7 +35,7 @@ Note the semvar range. When breaking changes are introduced, this will be increm
 
 - [armory-embeds-chat-codes](https://github.com/madou/armory-embeds-chat-code) - parses an ingame chat code to armory embed markup.
 
-## Configuration
+## [Options](https://madou.github.io/armory-embeds/?selectedKind=options)
 
 ### Global Settings
 
@@ -70,6 +70,23 @@ Each embed has a class that you can target, each class follows the pattern `.gw2
 ```
 
 ## Embeds
+
+### [GW2ACharacter](https://madou.github.io/armory-embeds/?selectedKind=Character)
+
+<img src="https://user-images.githubusercontent.com/6801309/31857350-3c48ba7a-b728-11e7-8f5b-d12493c20f7e.png" width="400" />
+
+```html
+<div
+  data-armory-embed="character"
+  data-armory-name="Quartermile"
+>
+</div>
+```
+
+| attribute | value | required | description |
+|-|-|-|-|
+| data-armory-embed | character | yes | |
+| data-armory-name | string | yes | Name of character on GW2Armory.com |
 
 ### [Skills](https://madou.github.io/armory-embeds/?selectedKind=Skills)
 
@@ -107,7 +124,10 @@ Each embed has a class that you can target, each class follows the pattern `.gw2
   data-armory-embed="items"
   data-armory-blank-text="Some other text can go here!"
   data-armory-size="60"
-  data-armory-ids="24836,-1,74412,46774,39620"
+  data-armory-ids="24836,-1,74412,46774,39620,1379"
+  data-armory-1379-upgrades="24615,24815"
+  data-armory-1379-upgrade-count="{\"24815\": 3}"
+  data-armory-1379-infusions="49426,49426"
 >
 </div>
 
@@ -127,6 +147,9 @@ Each embed has a class that you can target, each class follows the pattern `.gw2
 | data-armory-blank-text | string | no | When loading an item of id `-1` you can override the tooltip text to be whatever you want. |
 | data-armory-{ITEM_ID}-stat | number | no | Loads the item with the stat of choice. |
 | data-armory-{ITEM_ID}-skin | number | no | Loads the item with the skin of choice. |
+| data-armory-{ITEM_ID}-upgrades | number | no | Loads the item with the upgrades of choice. |
+| data-armory-{ITEM_ID}-infusions | number | no | Loads the item with the infusions of choice. |
+| data-armory-{ITEM_ID}-upgrade-count | stringified `{ [number]: number }` | no | Sets the upgrade counts. |
 | data-armory-inline-text | string | no | Optional inline text that will be displayed to the right of the icon. You can pass in `wiki` to use a gw2 wiki URL, `gw2spidy` to use a gw2spidy URL, or pass in any other text that will be used as the link. |
 
 ### [Specializations](https://madou.github.io/armory-embeds/?selectedKind=Specializations)

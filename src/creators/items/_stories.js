@@ -54,6 +54,7 @@ storiesOf('Items', module)
     name="items"
     data-armory-ids="1379"
     data-armory-1379-upgrades="24615,24815"
+    data-armory-1379-upgrade-count={'{"24815": 3}'}
   />
 )
 .add('with infusions', () =>

@@ -12,13 +12,13 @@ type Props = {
   mode?: 'rune' | 'item',
   statIds: { [key: number]: number },
   skinIds: { [key: number]: number },
+  upgradeCounts: { [key: number]: number },
   upgradeIds: { [key: number]: Array<number> },
   infusionIds: { [key: number]: Array<number> },
 } & EmbedProps;
 
 const ItemsEmbed = ({
   ids,
-  statIds,
   items,
   itemStats,
   className,
@@ -26,9 +26,11 @@ const ItemsEmbed = ({
   blankText,
   size,
   skins,
+  statIds,
   skinIds,
   upgradeIds,
   infusionIds,
+  upgradeCounts,
   ...props
 }: Props) => (
   <div className={className}>
@@ -45,6 +47,7 @@ const ItemsEmbed = ({
         className={styles.item}
         upgrades={upgradeIds[id]}
         infusions={infusionIds[id]}
+        upgradeCounts={upgradeCounts[id]}
         {...props}
       />
     ) : (
@@ -61,6 +64,7 @@ const ItemsEmbed = ({
 ItemsEmbed.defaultProps = {
   upgradeIds: {},
   infusionIds: {},
+  upgradeCounts: {},
 };
 
 export default ItemsEmbed;
