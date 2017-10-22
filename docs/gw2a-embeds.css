@@ -4,9 +4,6 @@
 .src-styles--tooltip * {
   box-sizing: border-box;
 }
-.src-styles--embed {
-  line-height: 0;
-}
 .src-styles--embed * {
   box-sizing: border-box;
 }
