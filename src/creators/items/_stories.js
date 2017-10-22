@@ -49,7 +49,14 @@ storiesOf('Items', module)
     data-armory-77482-stat="656"
   />
 )
-.add('with upgrades', () =>
+.add('with upgrade', () =>
+  <ArmoryEmbed
+    name="items"
+    data-armory-ids="1379"
+    data-armory-1379-upgrades="24615"
+  />
+)
+.add('with multiple upgrades', () =>
   <ArmoryEmbed
     name="items"
     data-armory-ids="1379"

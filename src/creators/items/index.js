@@ -17,9 +17,7 @@ const extractAttr = (element, key, ids, parserOverrider) => {
     const parser = parserOverrider || defaultParser;
 
     return {
-      [id]: rawId.includes(',')
-        ? rawId.split(',').map(parser)
-        : parser(rawId),
+      [id]: parser(rawId),
     };
   })
   .reduce((map, next) => Object.assign(map, next), {});
@@ -28,8 +26,8 @@ const extractAttr = (element, key, ids, parserOverrider) => {
 export default function (element: HTMLElement, ids: Array<number>) {
   const stats = extractAttr(element, 'stat', ids);
   const skins = extractAttr(element, 'skin', ids);
-  const upgrades = extractAttr(element, 'upgrades', ids);
-  const infusions = extractAttr(element, 'infusions', ids);
+  const upgrades = extractAttr(element, 'upgrades', ids, (str) => str.split(',').map(defaultParser));
+  const infusions = extractAttr(element, 'infusions', ids, (str) => str.split(',').map(defaultParser));
   const upgradeCounts = extractAttr(element, 'upgrade-count', ids, (str) => JSON.parse(str));
 
   return (props: EmbedProps) =>
