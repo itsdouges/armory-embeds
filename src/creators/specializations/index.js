@@ -1,10 +1,10 @@
 // @flow
 
-import type { EmbedProps } from '../bootstrap';
+import type { EmbedProps } from '../../bootstrap';
 
 import React from 'react';
-import Specializations from '../components/Specializations';
-import { makeAttribute } from '../bootstrap';
+import Specializations from '../../components/Specializations';
+import { makeAttribute } from '../../bootstrap';
 
 export default function (element: HTMLElement, ids: Array<number>) {
   const traitIds = ids.map((id) => {

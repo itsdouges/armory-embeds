@@ -1,9 +1,9 @@
 // @flow
 
-import type { EmbedProps } from '../bootstrap';
+import type { EmbedProps } from '../../bootstrap';
 
 import React from 'react';
-import Items from '../components/Items';
+import Items from '../../components/Items';
 
 const extractAttr = (element, key, ids) => {
   return ids.map((id) => {

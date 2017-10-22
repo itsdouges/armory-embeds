@@ -26,6 +26,8 @@ module.exports = {
     __DATE__: true,
     __SHORT_GIT_HASH__: true,
     __DEVELOPMENT__: true,
+    storiesOf: true,
+    ArmoryEmbed: true,
   },
 
   settings: {
