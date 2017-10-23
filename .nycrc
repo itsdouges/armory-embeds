@@ -13,6 +13,7 @@
     "src/flowTypes.js",
     "docs",
     "stories",
+    "src/**/_stories.js",
     "webpack.config.js",
     ".storybook",
     ".postcssrc.js",
