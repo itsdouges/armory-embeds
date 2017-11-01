@@ -1,10 +1,15 @@
 // @flow
 
-import type { EmbedProps } from '../../bootstrap';
-
+import { props as PropTypes } from 'skatejs';
 import React from 'react';
-import Amulets from '../../components/Amulets';
+import Async from '../../components/Async';
+import create from '../create';
 
-export default function (element: HTMLElement, ids: Array<number>) {
-  return (props: EmbedProps) => <Amulets {...props} ids={ids} />;
-}
+create('amulets', {
+  ids: PropTypes.array,
+})((props) => (
+  <Async
+    {...props}
+    load={() => import('../../components/Amulets')}
+  />
+));

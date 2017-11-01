@@ -52,7 +52,7 @@ class AmuletsEmbed extends Component<Props> {
 
   render () {
     const { ids, amulets, className, blankText, size, ...props } = this.props;
-    // TODO: Create a Gw2Amulet component that has the fetching logic inside it.
+
     return (
       <div className={className}>
         {ids.map((id) => AmuletsEmbed.renderAmulet(id, amulets, blankText, size, props))}

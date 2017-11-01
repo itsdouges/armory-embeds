@@ -2,10 +2,7 @@ import React from 'react';
 
 storiesOf('Amulets', module)
 .add('default', () =>
-  <ArmoryEmbed
-    name="amulets"
-    data-armory-ids="14"
-  />
+  <gw2-amulets ids="14" />
 )
 .add('multiple', () =>
   <ArmoryEmbed

@@ -27,6 +27,7 @@
     "smoke-run-prod": "npm run build && http-server ./ & opn http://127.0.0.1:8080/test/smoke.html?prod"
   },
   "dependencies": {
+    "@skatejs/renderer-react": "^0.0.0",
     "armory-component-ui": "^0.5.2",
     "axios": "^0.16.2",
     "classnames": "^2.2.5",
@@ -39,7 +40,8 @@
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "skatejs": "^5.0.0-beta.3"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.12",
