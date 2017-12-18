@@ -49,11 +49,13 @@ Make sure the assign this config _before_ declaring the `gw2a` script.
 |-|-|-|-|
 | lang | string | no | The language the embeds will be loaded in. Supported values are: en, fr, de, es, zh, ru |
 | persistToLocalStorage | boolean | no | Turns data persistence on or off. Default to true. |
+| forceCacheClearOnNextRun | string | no | Forces data cache to be cleared. Use wisely. Use a unique key every time you want to clear the cache. |
 
 ```javascript
 document.GW2A_EMBED_OPTIONS = {
   lang: 'en',
   persistToLocalStorage: true,
+  forceCacheClearOnNextRun: '1',
 };
 ```
 
