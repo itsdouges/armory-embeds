@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import cx from 'classnames';
 import axios from 'axios';
 import T from 'i18n-react';
-import { Tooltip, persistToLocalStorage } from 'armory-component-ui';
+import { Tooltip, persistToLocalStorage, forceCacheClearOnNextRun } from 'armory-component-ui';
 // $FlowFixMe
 import '!!style-loader!css-loader!armory-component-ui/styles.css'; // eslint-disable-line
 
@@ -48,6 +48,10 @@ function setOptions () {
 
   if (!options.persistToLocalStorage) {
     persistToLocalStorage(false);
+  }
+
+  if (options.forceCacheClearOnNextRun) {
+    forceCacheClearOnNextRun(options.forceCacheClearOnNextRun);
   }
 
   return options;

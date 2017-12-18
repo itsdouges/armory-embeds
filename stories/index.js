@@ -13,9 +13,18 @@ const makeLang = (lang, id) => (
 );
 
 storiesOf('options', module)
-.add('english', () => makeLang('en', 53))
-.add('french', () => makeLang('fr', 52))
-.add('chinese', () => makeLang('zh', 51))
-.add('russian', () => makeLang('ru', 50))
-.add('spanish', () => makeLang('es', 49))
-.add('german', () => makeLang('de', 48));
+.add('lang/english', () => makeLang('en', 53))
+.add('lang/french', () => makeLang('fr', 52))
+.add('lang/chinese', () => makeLang('zh', 51))
+.add('lang/russian', () => makeLang('ru', 50))
+.add('lang/spanish', () => makeLang('es', 49))
+.add('lang/german', () => makeLang('de', 48))
+.add('forceCacheClearOnNextRun()', () => (
+  <ArmoryEmbed
+    options={{
+      forceCacheClearOnNextRun: '1',
+    }}
+    name="specializations"
+    data-armory-ids={52}
+  />
+));

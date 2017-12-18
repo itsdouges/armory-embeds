@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Changed
+- Update `armory-component-ui` dep
+
+### Added
+- Ability to force clear data cache
+
+
 ## [0.3.3][] - 2017-10-22
 ### Fixed
 - Single infusion/upgrade not working
