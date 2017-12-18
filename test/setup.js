@@ -2,6 +2,8 @@ import 'babel-polyfill';
 import path from 'path';
 import { addPath } from 'app-module-path';
 import noop from 'lodash/noop';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
 global.React = require('react');
 
@@ -13,6 +15,8 @@ addPath(path.join(__dirname, '..', '/src'));
 ['css', 'png', 'less'].forEach((extension) => {
   require.extensions[`.${extension}`] = noop;
 });
+
+Enzyme.configure({ adapter: new Adapter() });
 
 global.chai = require('chai');
 global.sinon = require('sinon');
