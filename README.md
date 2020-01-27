@@ -2,15 +2,14 @@
 
 [![NPM version](http://img.shields.io/npm/v/armory-embeds.svg?style=flat-square)](https://www.npmjs.com/package/armory-embeds)
 [![NPM downloads](http://img.shields.io/npm/dm/armory-embeds.svg?style=flat-square)](https://www.npmjs.com/package/armory-embeds)
-[![Build Status](http://img.shields.io/travis/madou/armory-embeds/master.svg?style=flat-square)](https://travis-ci.org/madou/armory-embeds)
-[![codecov](https://codecov.io/gh/madou/armory-embeds/branch/master/graph/badge.svg)](https://codecov.io/gh/madou/armory-embeds)
-[![Dependency Status](http://img.shields.io/david/madou/armory-embeds.svg?style=flat-square)](https://david-dm.org/madou/armory-embeds)
 [![Discord](https://img.shields.io/badge/discord-GW2Armory-blue.svg)](https://discord.gg/3BRbV7b)
-[![Patreon](https://img.shields.io/badge/patreon-Become%20a%20Patreon-green.svg)](https://www.patreon.com/bePatron?u=5546924)
 
-Guild Wars 2 Armory is arming the GW2 community with powered up embeds for items, skills, and more. Currently serving over 6 million requests a month and growing!
+Guild Wars 2 Armory is arming the GW2 community with powered up embeds for items, 
+skills, 
+and more. 
 
-Want something more low level? Want to integrate directly with your React/preact app instead of this high level abstraction? Check out the [`armory-ui-components`](https://github.com/madou/armory-component-ui) library.
+Want something more low level? Want to integrate directly with your React app instead of this high level abstraction?
+Check out the [`armory-ui-components`](https://github.com/madou/armory-component-ui) library.
 
 ## Usage
 
@@ -73,23 +72,6 @@ Each embed has a class that you can target, each class follows the pattern `.gw2
 ```
 
 ## Embeds
-
-### [GW2ACharacter](https://madou.github.io/armory-embeds/?selectedKind=Character)
-
-<img src="https://user-images.githubusercontent.com/6801309/31857350-3c48ba7a-b728-11e7-8f5b-d12493c20f7e.png" width="400" />
-
-```html
-<div
-  data-armory-embed="character"
-  data-armory-name="Quartermile"
->
-</div>
-```
-
-| attribute | value | required | description |
-|-|-|-|-|
-| data-armory-embed | character | yes | |
-| data-armory-name | string | yes | Name of character on GW2Armory.com |
 
 ### [Skills](https://madou.github.io/armory-embeds/?selectedKind=Skills)
 
