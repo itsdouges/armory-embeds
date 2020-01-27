@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [0.4.1][] - 2020-01-27
+
 ### Fixed
 - Point to netlify functions for item stats
 
@@ -82,7 +84,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial commit
 
-[Unreleased]: https://github.com/madou/armory-embeds/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/madou/armory-embeds/compare/v0.4.1...HEAD
+[0.4.1]: https://github.com/madou/armory-embeds/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/madou/armory-embeds/compare/v0.3.3...v0.4.0
 [0.3.3]: https://github.com/madou/armory-embeds/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/madou/armory-embeds/compare/v0.3.1...v0.3.2
