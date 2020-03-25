@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Fixed
+- Update deps
+
 ## [0.4.1][] - 2020-01-27
 
 ### Fixed
