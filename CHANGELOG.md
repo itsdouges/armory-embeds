@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
+
+## [0.4.3][] - 2020-03-28
 ### Fixed
 - Update deps
 
@@ -91,7 +93,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial commit
 
-[Unreleased]: https://github.com/madou/armory-embeds/compare/v0.4.2...HEAD
+[Unreleased]: https://github.com/madou/armory-embeds/compare/v0.4.3...HEAD
+[0.4.3]: https://github.com/madou/armory-embeds/compare/v0.4.2...v0.4.3
 [0.4.2]: https://github.com/madou/armory-embeds/compare/v0.4.1...v0.4.2
 [0.4.1]: https://github.com/madou/armory-embeds/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/madou/armory-embeds/compare/v0.3.3...v0.4.0
