@@ -367,10 +367,10 @@ argv@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/argv/-/argv-0.0.2.tgz#ecbd16f8949b157183711b1bda334f37840185ab"
 
-armory-component-ui@^0.8.3-1:
-  version "0.8.3-1"
-  resolved "https://registry.yarnpkg.com/armory-component-ui/-/armory-component-ui-0.8.3-1.tgz#7a5c23cbbb356c0a557ddf3afdca2907aa5b4641"
-  integrity sha512-NiX8AQCif509fH6J54OOaPIapWZkwN3mLDydhtVOH6OfghAJheO7G9MI1UD7C+IvbrIEKZExmA9zU2hA0T5yGQ==
+armory-component-ui@^0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/armory-component-ui/-/armory-component-ui-0.8.4.tgz#e6a712f1a544c2b1e2897a30638ed741600af714"
+  integrity sha512-SCFiF0bb+t98a/kDd/B+M9rKHL3YCmG8xFmBzYRsOj4eFuNqMdEuJOUVsOroieApTb/0h/G4Fx9ap2NEciqnEQ==
 
 arr-diff@^2.0.0:
   version "2.0.0"
