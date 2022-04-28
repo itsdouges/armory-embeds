@@ -215,16 +215,17 @@ Best bet is to look at the GW2 Wiki, for example: https://wiki.guildwars2.com/wi
 
 ## Who Is Using armory-embeds?
 
-- [MetaBattle](https://metabattle.com)
-- [Quantify](https://qtfy.eu)
-- [Le Bus Magique](http://www.lebusmagique.fr)
-- [mists.co](http://mists.co)
-- [Lucky Noobs](https://lucky-noobs.com)
-- [Discretize](http://discretize.eu)
-- [Abaddons Maul](https://abaddons-maul.de)
-- [Chains of the Kraken](https://ctk.enjin.com)
-- [Snow Crows](http://snowcrows.com)
-- [SPF Gaming](http://spf-gaming.de/)
+- [MetaBattle](https://metabattle.com) *for builds for all gamemodes in Guild Wars 2*
+- ~~[Quantify](https://qtfy.eu)~~ *Currently Offline*
+- [Le Bus Magique](http://www.lebusmagique.fr) *event-driven french community guild evolving on Guild Wars 2*
+- ~~[mists.co](http://mists.co)~~ *Currently Offline*
+- [Lucky Noobs](https://lucky-noobs.com)  *benchmarks, builds, raids in English and German*
+- ~~[Discretize](http://discretize.eu)~~ *Now uses [discretize-ui](https://github.com/discretize/discretize-ui)*
+- ~~[Abaddons Maul](https://abaddons-maul.de)~~ *Currently Offline*
+- [Chains of the Kraken](https://ctk.enjin.com) *Comming Soon since 2019*
+- [Snow Crows](http://snowcrows.com) *benchmarks, builds, raids, strikes, and dungeons*
+- ~~[SPF Gaming](http://spf-gaming.de/)~~ *Currently Offline*
+- [Accessibility Wars Too](https://accessibilitywars.com/) *Low-Intensity Accessible Builds for Guild Wars 2*
 
 [Don't see your site? Add it in a Pull Request!](https://github.com/madou/armory-react/pulls)
 
