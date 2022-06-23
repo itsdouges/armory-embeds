@@ -88,7 +88,7 @@
     "flow-typed": "^2.1.5",
     "gzip-size": "^4.1.0",
     "http-server": "^0.10.0",
-    "jsdom": "^11.5.1",
+    "jsdom": "^16.5.0",
     "jsdom-global": "^3.0.2",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
