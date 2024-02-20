@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "armory-component-ui": "^0.8.4",
-    "axios": "^0.17.1",
+    "axios": "^0.28.0",
     "classnames": "^2.2.5",
     "function-batch": "^1.1.2",
     "i18n-react": "0.3",
